@@ -1,0 +1,8 @@
+*.idea
+*.pyc
+*.egg-info/
+*.png
+*.swp
+output.xml
+*.html
+.gitignore
