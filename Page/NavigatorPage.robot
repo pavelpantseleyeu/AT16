@@ -5,3 +5,6 @@ ${TOP_LOGO_IMAGE_LOCATOR}    ${EMPTY}
 Is Top Logo Image Visible
 
 Wait Top Logo Image
+    Wait Until Page Contains Element    //img[@src='images/logo.gif']    1000
+    Wait Until Page Contains Element
+    Wait Until Page Contains Element

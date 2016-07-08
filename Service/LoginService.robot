@@ -4,5 +4,5 @@ Resource          ../Page/NavigatorPage.robot
 
 *** Keywords ***
 Login And Wait Top Logo Image UI
-    Login
+    Login    ${ADMIN}    ${PASSWORD}
     Wait Top Logo Image
