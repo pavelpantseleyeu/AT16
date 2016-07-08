@@ -1,2 +1,0 @@
-*** Settings ***
-Library           createFirefoxProfileModule.py

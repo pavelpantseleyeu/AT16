@@ -1,8 +1,7 @@
 *** Settings ***
-Suite Setup       Open Browser And Maximize Window ${CMP_ADRESS} ${BROWSER_TYPE}
-Suite Teardown    Close Browser
+Suite Setup       Open Browser And Maximize Window    ${CMP_ADRESS}    ${BROWSER_TYPE}
+Suite Teardown    CloseBrowser
 Test Setup        Wait For Login Page
-Test Teardown
 Resource          ../Service/LoginService.robot
 Library           Selenium2Library
 
@@ -24,12 +23,10 @@ Open Browser And Maximize Window
     Open Browser    ${url}    ${browser_type}
     MaximizeBrowserWindow
 
-Close Browser
-    CloseBrowser
-
 Wait For Login Page
     Wait Until Element Is Enabled    ${USER_INPUT_LOCATOR}
 
 Wait For Navigator Page
     Wait Top Logo Image
-PPP
+
+
