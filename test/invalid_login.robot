@@ -1,12 +1,12 @@
 *** Settings ***
-Resource          ../Service/InvalidLoginService.robot
+Resource          ../Service/LoginService.robot
 
 *** Test Cases ***
 1. Invalid Username
-    Login With Invalid User Name And Wait Error Message UI
+    invalidLogin    ${ADMIN_PASSWORD}
 
 2. Invalid Password
-    Login With Invalid Password And Wait Error Message UI
+    ${ADMIN_LOGIN}    invalidPassword
 
 3. Empty Password
-    Login With Empty Password And Wait Error Message UI
+    ${ADMIN_LOGIN}    ${EMPTY}

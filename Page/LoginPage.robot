@@ -8,25 +8,9 @@ ${PASSWORD_INPUT_TEXT_LOCATOR}    j_password
 
 *** Keywords ***
 Login
-    Open Browser    ${CMP_ADDRESS}
-    Input Text    ${USER_NAME_INPUT_TEXT_LOCATOR}    ${ADMIN_LOGIN}
-    Input Text    ${PASSWORD_INPUT_TEXT_LOCATOR}    ${ADMIN_PASSWORD}
-    Submit Form
-
-InvalidUserNameLogin
-    Open Browser    ${CMP_ADDRESS}
-    Input Text    ${USER_NAME_INPUT_TEXT_LOCATOR}    ${EMPTY}
-    Input Text    ${PASSWORD_INPUT_TEXT_LOCATOR}    ${ADMIN_PASSWORD}
-    Submit Form
-
-InvalidPasswordLogin
-    Open Browser    ${CMP_ADDRESS}
-    Input Text    ${USER_NAME_INPUT_TEXT_LOCATOR}    ${ADMIN_LOGIN}
-    Input Text    ${PASSWORD_INPUT_TEXT_LOCATOR}    ${/}
-    Submit Form
-
-EmptyPasswordLogin
-    Open Browser    ${CMP_ADDRESS}
-    Input Text    ${USER_NAME_INPUT_TEXT_LOCATOR}    ${ADMIN_LOGIN}
-    Input Text    ${PASSWORD_INPUT_TEXT_LOCATOR}    ${EMPTY}
+    [Arguments]    ${login}    ${password}
+    Open Browser    ${CMP_ADDRESS}    chrome
+    Maximize Browser Window
+    Input Text    ${USER_NAME_INPUT_TEXT_LOCATOR}    ${login}
+    Input Text    ${PASSWORD_INPUT_TEXT_LOCATOR}    ${password}
     Submit Form

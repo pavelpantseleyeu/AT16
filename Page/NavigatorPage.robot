@@ -1,6 +1,7 @@
 *** Variables ***
 ${TOP_LOGO_IMAGE_LOCATOR}    ${EMPTY}
 ${LOGIN_ERROR_MESSAGE_LOCATOR}    ${EMPTY}
+${ERROR_MESSAGE_LOCATOR}    ${EMPTY}
 
 *** Keywords ***
 Is Top Logo Image Visible
