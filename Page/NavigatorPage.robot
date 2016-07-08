@@ -10,3 +10,6 @@ Is Top Logo Image Visible
 
 Wait Top Logo Image
     Is Top Logo Image Visible
+
+Wait For Navigator Page
+    Wait Top Logo Image

@@ -4,6 +4,7 @@ Suite Teardown    CloseBrowser
 Test Setup        Wait For Login Page
 Resource          ../Service/LoginService.robot
 Library           Selenium2Library
+Resource          C:/Users/Dzmitry_Kamarou/PycharmProjects/AT16/Page/Page.robot
 
 *** Variables ***
 
@@ -16,17 +17,3 @@ Library           Selenium2Library
     ...    4.Submit the dialog message
     ...    5.Verify that user has login
     Login And Wait Top Logo Image UI
-
-*** Keywords ***
-Open Browser And Maximize Window
-    [Arguments]    ${url}    ${browser_type}
-    Open Browser    ${url}    ${browser_type}
-    MaximizeBrowserWindow
-
-Wait For Login Page
-    Wait Until Element Is Enabled    ${USER_INPUT_LOCATOR}
-
-Wait For Navigator Page
-    Wait Top Logo Image
-
-
