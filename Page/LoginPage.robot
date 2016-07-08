@@ -9,6 +9,6 @@ ${PASSWORD_INPUT_TEXT_LOCATOR}    j_password
 *** Keywords ***
 Login
     Open Browser    ${CMP_ADDRESS}
-    Input Text    ${USER_NAME_INPUT_TEXT_LOCATOR}    ${login}
-    Input Text    ${PASSWORD_INPUT_TEXT_LOCATOR}    ${password}
+    Input Text    ${USER_NAME_INPUT_TEXT_LOCATOR}    ${ADMIN_LOGIN}
+    Input Text    ${PASSWORD_INPUT_TEXT_LOCATOR}    ${ADMIN_PASSWORD}
     Submit Form
