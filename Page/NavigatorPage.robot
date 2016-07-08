@@ -1,8 +1,12 @@
+*** Settings ***
+Library           Selenium2Library
+
 *** Variables ***
-${TOP_LOGO_IMAGE_LOCATOR}    ${EMPTY}
+${TOP_LOGO_IMAGE_LOCATOR}    //img[@src='images/logo.gif']
 
 *** Keywords ***
 Is Top Logo Image Visible
+    Wait Until Element Is Visible    ${TOP_LOGO_IMAGE_LOCATOR}    1000
 
 Wait Top Logo Image
-    Wait Until Page Contains Element    //img[@src='images/logo.gif']    1000
+    Is Top Logo Image Visible
