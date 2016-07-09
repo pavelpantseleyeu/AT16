@@ -6,7 +6,7 @@ Resource          NavigatorPage.robot
 *** Variables ***
 ${USER_NAME_INPUT_TEXT_LOCATOR}    //input[@id='j_username']
 ${PASSWORD_INPUT_TEXT_LOCATOR}    //input[@name='j_password']
-${LOGIN_ERROR_MESSAGE_LOCATOR}    //font[text() = 'Incorrect login or password.']
+${LOGIN_ERROR_MESSAGE_LOCATOR}    //font[contains(text(), 'Incorrect login or password.')]
 
 *** Keywords ***
 Login
