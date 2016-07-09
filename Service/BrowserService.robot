@@ -1,10 +1,10 @@
 *** Settings ***
-Resource          ../Page/Page.robot
+Resource          ../UI/Browser.robot
 
 *** Keywords ***
-RiseBrowser
+StartBrowser
     [Arguments]    ${url}    ${browser_type}
-    Page.RiseBrowser    ${url}    ${browser_type}
+    RiseBrowser    ${url}    ${browser_type}
 
-ShutdownBrowser
-    Page.ShutdownBrowser
+StopBrowser
+    ShutdownBrowser

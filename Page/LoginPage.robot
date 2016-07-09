@@ -7,7 +7,6 @@ Resource          NavigatorPage.robot
 ${USER_NAME_INPUT_TEXT_LOCATOR}    //input[@id='j_username']
 ${PASSWORD_INPUT_TEXT_LOCATOR}    //input[@name='j_password']
 ${LOGIN_ERROR_MESSAGE_LOCATOR}    //font[text() = 'Incorrect login or password.']
-${TOP_LOGO_IMAGE_LOCATOR}    //img[contains(@src, 'logo.gif')]
 
 *** Keywords ***
 Login
