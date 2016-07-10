@@ -5,6 +5,7 @@ Test Setup        Wait For Login Page
 Resource          ../Service/LoginService.robot
 Library           Selenium2Library
 Resource          C:/Users/Dzmitry_Kamarou/PycharmProjects/AT16/Page/Page.robot
+Resource          ../Page/NavigatorPage.robot
 
 *** Variables ***
 
@@ -16,4 +17,4 @@ Resource          C:/Users/Dzmitry_Kamarou/PycharmProjects/AT16/Page/Page.robot
     ...    3.Click on to Submit button
     ...    4.Submit the dialog message
     ...    5.Verify that user has login
-    Login And Wait Top Logo Image UI
+    Login And Wait Top Logo Image UI    ${NAVIGATOR_PAGE_TOP_LOGO_IMAGE_LOCATOR}

@@ -6,6 +6,7 @@ Resource          ../globalConfig/testEnv.robot
 ${USER_INPUT_LOCATOR}    //input[@id='j_username']
 ${PASSWORD_INPUT_LOCATOR}    //input[@name='j_password']
 ${LOGIN_BUTTON_LOCATOR}    //button[contains(text(),'Login')]
+${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}    //img[@src='images/logo.gif?b=']
 
 *** Keywords ***
 Login
@@ -15,4 +16,4 @@ Login
     Submit Form
 
 Wait For Login Page
-    Wait Until Element Is Enabled    ${USER_INPUT_LOCATOR}
+    Wait Until Element Is Enabled    ${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}
