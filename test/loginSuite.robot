@@ -1,6 +1,6 @@
 *** Settings ***
-Suite Setup       StartBrowser    ${CMP_ADDRESS}    ${BROWSER_TYPE_CHROME}
-Suite Teardown    StopBrowser
+Suite Setup       Start Browser    ${LOGIN_PAGE_URL}    ${BROWSER_TYPE_CHROME}
+Suite Teardown    Stop Browser
 Resource          ../Service/LoginService.robot
 Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/BrowserService.robot

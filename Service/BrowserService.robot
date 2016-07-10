@@ -2,9 +2,9 @@
 Resource          ../UI/Browser.robot
 
 *** Keywords ***
-StartBrowser
+Start Browser
     [Arguments]    ${url}    ${browser_type}
-    RiseBrowser    ${url}    ${browser_type}
+    Rise Browser    ${url}    ${browser_type}
 
-StopBrowser
-    ShutdownBrowser
+Stop Browser
+    Shutdown Browser

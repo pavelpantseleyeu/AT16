@@ -1,11 +1,14 @@
 *** Settings ***
-Suite Setup       StartBrowser    ${CMP_ADDRESS}    ${BROWSER_TYPE_CHROME}
-Suite Teardown    StopBrowser
+Suite Setup       Start Browser    ${LOGIN_PAGE_URL}    ${BROWSER_TYPE_CHROME}
+Suite Teardown    Stop Browser
 Test Template     Login with invalid credentials should fail
 Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/LoginService.robot
 Resource          ../Service/BrowserService.robot
 Resource          ../Utils/Randomiser.robot
+
+*** Variables ***
+${randomString}    ${EMPTY}
 
 *** Test Cases ***
 1. Invalid Username Test
@@ -39,4 +42,5 @@ Resource          ../Utils/Randomiser.robot
 Login with invalid credentials should fail
     [Arguments]    ${username}    ${password}
     Login Service UI    ${username}    ${password}
-    Wait For Login Error Message
+    ${test_status}=    Check Login Service
+    Should Be True    ${test_status}    Error! Login error message does not exists

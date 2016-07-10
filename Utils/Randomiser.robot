@@ -2,6 +2,7 @@
 Library           String
 
 *** Keywords ***
-CreateRandomString
+Create Random String
     [Arguments]    ${number_of_characters}
-    Generate Random String    ${number_of_characters}
+    ${x}=    Generate Random String    ${number_of_characters}
+    [Return]    ${x}

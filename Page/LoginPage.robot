@@ -27,3 +27,7 @@ Wait For Login Error Message
 
 Wait Top Logo Image
     Wait Until Element Is Visible    ${TOP_LOGO_IMAGE_LOCATOR}    ${SELENIUM_DEFAULT_TIMEOUT}
+
+Is Login Error Message Visible
+    ${status}=    Run Keyword And Return Status    Wait For Login Error Message
+    [Return]    ${status}

@@ -2,10 +2,10 @@
 Library           Selenium2Library
 
 *** Keywords ***
-RiseBrowser
+Rise Browser
     [Arguments]    ${url}    ${browser_type}
     Open Browser    ${url}    ${browser_type}
     Maximize Browser Window
 
-ShutdownBrowser
+Shutdown Browser
     Close Browser
