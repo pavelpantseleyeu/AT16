@@ -1,6 +1,7 @@
 *** Settings ***
 Library           Selenium2Library
 Resource          ../globalConfig/testEnv.robot
+Resource          Page.robot
 
 *** Variables ***
 ${USER_INPUT_LOCATOR}    //input[@id='j_username']
@@ -16,4 +17,4 @@ Login
     Submit Form
 
 Wait For Login Page
-    Wait Until Element Is Enabled    ${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}
+    Wait Top Logo Image    ${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}
