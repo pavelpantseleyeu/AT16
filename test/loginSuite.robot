@@ -4,6 +4,8 @@ Suite Teardown    CloseBrowser
 Test Setup        Wait For Login Page
 Resource          ../Service/LoginService.robot
 Resource          ../Service/NavigatorService.robot
+Resource          ../Page/NavigatorPage.robot
+Resource          ../globalConfig/testEnv.robot
 
 *** Variables ***
 

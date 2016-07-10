@@ -1,6 +1,5 @@
 *** Settings ***
 Resource          ../Page/LoginPage.robot
-Resource          ../Page/NavigatorPage.robot
 Resource          ../Page/Page.robot
 
 *** Keywords ***
