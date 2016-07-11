@@ -1,6 +1,5 @@
 *** Settings ***
 Resource          ../Page/LoginPage.robot
-Resource          ../Page/Page.robot
 
 *** Keywords ***
 Login Service UI
@@ -10,9 +9,12 @@ Login Service UI
 Check Login Service
     ${login_error_message_status}=    Is Login Error Message Visible
     [Return]    ${login_error_message_status}
-    
+
 Login And Wait Top Logo Image UI
-    [Arguments]    ${top_logo_image_locator}    ${login}    ${password}
+    [Arguments]    ${login}    ${password}
     Login    ${login}    ${password}
-    ${logo_status}    Is Top logo Image Visible    ${top_logo_image_locator}
+    ${logo_status}    Is Navigator Page Top Logo Image Visible
     [Return]    ${logo_status}
+
+Wait For Login Page
+    Wait Login Page Top Logo Image

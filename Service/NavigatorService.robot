@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          ../Page/Page.robot
+Resource          ../Page/NavigatorPage.robot
 
 *** Keywords ***
 Check Navigator Page Status
