@@ -2,11 +2,16 @@
 Library           Selenium2Library
 Resource          ../globalConfig/testEnv.robot
 Resource          NavigatorPage.robot
+Resource          Page.robot
 
 *** Variables ***
 ${USER_NAME_INPUT_TEXT_LOCATOR}    //input[@id='j_username']
 ${PASSWORD_INPUT_TEXT_LOCATOR}    //input[@name='j_password']
 ${LOGIN_ERROR_MESSAGE_LOCATOR}    //font[contains(text(), 'Incorrect login or password.')]
+${USER_INPUT_LOCATOR}    //input[@id='j_username']
+${PASSWORD_INPUT_LOCATOR}    //input[@name='j_password']
+${LOGIN_BUTTON_LOCATOR}    //button[contains(text(),'Login')]
+${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}    //img[@src='images/logo.gif?b=']
 
 *** Keywords ***
 Login
@@ -14,7 +19,13 @@ Login
     Wait For Login Page
     Input Text    ${USER_NAME_INPUT_TEXT_LOCATOR}    ${login}
     Input Text    ${PASSWORD_INPUT_TEXT_LOCATOR}    ${password}
+    [Arguments]    ${login}    ${password}
+    Input Text    ${USER_INPUT_LOCATOR}    ${login}
+    Input Text    ${PASSWORD_INPUT_LOCATOR}    ${password}
     Submit Form
+
+Wait For Login Page
+    Wait Top Logo Image    ${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}
 
 Is Error Message Visible
 
