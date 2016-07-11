@@ -3,7 +3,6 @@ Library           Selenium2Library
 Resource          ../globalConfig/testEnv.robot
 
 *** Variables ***
-${ERROR_MESSAGE_LOCATOR}    ${EMPTY}
 ${TOP_LOGO_IMAGE_LOCATOR}    //img[@src='images/logo.gif']
 
 *** Keywords ***

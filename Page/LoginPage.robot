@@ -17,10 +17,8 @@ Login
     Input Text    ${PASSWORD_INPUT_LOCATOR}    ${password}
     Submit Form
 
-Is Error Message Visible
-
 Wait For Login Error Message
-    Wait Until Element Is Visible    ${LOGIN_ERROR_MESSAGE_LOCATOR}    ${SELENIUM_DEFAULT_TIMEOUT}
+    Wait Until Element Is Visible    ${LOGIN_ERROR_MESSAGE_LOCATOR}    ${SELENIUM_DEFAULT_TIMEOUT}    No error message presented on the page
 
 Wait Login Page Top Logo Image
     Wait Until Element Is Visible    ${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}    ${SELENIUM_DEFAULT_TIMEOUT}

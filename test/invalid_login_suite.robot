@@ -1,5 +1,6 @@
 *** Settings ***
-Suite Setup       Start Browser    ${LOGIN_PAGE_URL}    ${BROWSER_TYPE_CHROME}
+Suite Setup       Start Browser    ${PAGE_URL}    ${BROWSER_TYPE}
+...               AND    wer
 Suite Teardown    Stop Browser
 Test Template     Login with invalid credentials should fail
 Resource          ../globalConfig/testEnv.robot
@@ -41,6 +42,6 @@ ${randomString}    ${EMPTY}
 *** Keywords ***
 Login with invalid credentials should fail
     [Arguments]    ${username}    ${password}
-    Login Service UI    ${username}    ${password}
-    ${test_status}=    Check Login Service
+    Login And Wait Top Logo Image UI    ${username}    ${password}
+    ${test_status}=    Is login attempts are unsuccessful
     Should Be True    ${test_status}    Error! Login error message does not exists
