@@ -1,7 +1,6 @@
+*** Settings ***
+
 *** Variables ***
-${TOP_LOGO_IMAGE_LOCATOR}    ${EMPTY}
+${NAVIGATOR_PAGE_TOP_LOGO_IMAGE_LOCATOR}    //img[@src='images/logo.gif']
 
 *** Keywords ***
-Is Top Logo Image Visible
-
-Wait Top Logo Image
