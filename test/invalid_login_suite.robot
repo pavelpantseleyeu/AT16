@@ -1,8 +1,7 @@
 *** Settings ***
 Suite Setup       Start Browser    ${PAGE_URL}    ${BROWSER_TYPE}
-...               AND    wer
 Suite Teardown    Stop Browser
-Test Template     Login with invalid credentials should fail
+Test Template     Login With Invalid Credentials Should Fail
 Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/LoginService.robot
 Resource          ../Service/BrowserService.robot
@@ -40,7 +39,7 @@ ${randomString}    ${EMPTY}
     ${ADMIN_LOGIN}    ${EMPTY}
 
 *** Keywords ***
-Login with invalid credentials should fail
+Login With Invalid Credentials Should Fail
     [Arguments]    ${username}    ${password}
     Login And Wait Top Logo Image UI    ${username}    ${password}
     ${test_status}=    Is Login Attempts Are Unsuccessful
