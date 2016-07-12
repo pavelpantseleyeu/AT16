@@ -43,5 +43,5 @@ ${randomString}    ${EMPTY}
 Login with invalid credentials should fail
     [Arguments]    ${username}    ${password}
     Login And Wait Top Logo Image UI    ${username}    ${password}
-    ${test_status}=    Is login attempts are unsuccessful
+    ${test_status}=    Is Login Attempts Are Unsuccessful
     Should Be True    ${test_status}    Error! Login error message does not exists

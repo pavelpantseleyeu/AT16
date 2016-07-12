@@ -6,7 +6,7 @@ Login Service UI
     [Arguments]    ${login}    ${password}
     Login    ${login}    ${password}
 
-Is login attempts are unsuccessful
+Is Login Attempts Are Unsuccessful
     ${login_error_message_status}=    Is Login Error Message Visible
     [Return]    ${login_error_message_status}
 

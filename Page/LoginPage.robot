@@ -1,7 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
 Resource          ../globalConfig/testEnv.robot
-Resource          NavigatorPage.robot
 
 *** Variables ***
 ${LOGIN_ERROR_MESSAGE_LOCATOR}    //font[contains(text(), 'Incorrect login or password.')]
