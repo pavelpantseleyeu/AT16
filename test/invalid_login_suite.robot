@@ -5,7 +5,6 @@ Suite Teardown    Stop Browser
 Test Template     Login with invalid credentials should fail
 Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/LoginService.robot
-Resource          ../Service/BrowserService.robot
 Resource          ../Utils/Randomiser.robot
 
 *** Variables ***

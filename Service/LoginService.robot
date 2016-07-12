@@ -1,5 +1,7 @@
 *** Settings ***
 Resource          ../Page/LoginPage.robot
+Resource          ../Page/NavigatorPage.robot
+Resource          ../Utils/Browser.robot
 
 *** Keywords ***
 Login Service UI
@@ -17,4 +19,4 @@ Login And Wait Top Logo Image UI
     [Return]    ${logo_status}
 
 Wait For Login Page
-    Wait Login Page Top Logo Image
+    Start Login Page
