@@ -42,10 +42,10 @@ ${randomString}    ${EMPTY}
 *** Keywords ***
 Login With Invalid Credentials Should Fail
     [Arguments]    ${username}    ${password}
-    Login And Wait Top Logo Image UI    ${username}    ${password}
+    Login Service UI    ${username}    ${password}
     ${test_status}=    Is Login Attempts Are Unsuccessful
     Should Be True    ${test_status}    Error! Login error message does not exists
 
 Set Random String
-    ${y}    Create Random String    ${NUMBER_OF_TEST_CHARACTERS}
-    ${randomString}    Set Suite Variable    ${y}
+    ${rndString}    Create Random String    ${NUMBER_OF_TEST_CHARACTERS}
+    ${randomString}    Set Suite Variable    ${rndString}
