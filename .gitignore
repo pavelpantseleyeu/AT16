@@ -3,6 +3,7 @@
 *.egg-info/
 *.png
 *.swp
+*.exe
 output.xml
 *.html
 .gitignore
