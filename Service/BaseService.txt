@@ -1,0 +1,5 @@
+*** Settings ***
+Resource          ../Page/LoginPage.robot
+
+*** Keywords ***
+Start Browser
