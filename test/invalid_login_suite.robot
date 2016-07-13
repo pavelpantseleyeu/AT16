@@ -9,7 +9,6 @@ Resource          ../Service/BrowserService.robot
 Resource          ../Utils/Randomiser.robot
 
 *** Variables ***
-${randomString}    ${EMPTY}
 
 *** Test Cases ***
 1. Invalid Username Test
@@ -19,7 +18,7 @@ ${randomString}    ${EMPTY}
     ...    3.Type valid user password to password input
     ...    4.Submit form
     ...    5.Check that error message has appear
-    ${randomString}    ${ADMIN_PASSWORD}
+    ${RANDOM_TEST_DATA}    ${ADMIN_PASSWORD}
 
 2. Invalid Password Test
     [Documentation]    Login with invalid Password should fail
@@ -28,7 +27,7 @@ ${randomString}    ${EMPTY}
     ...    3.Type invalid user password to password input
     ...    4.Submit form
     ...    5.Check that error message has appear
-    ${ADMIN_LOGIN}    ${randomString}
+    ${ADMIN_LOGIN}    ${RANDOM_TEST_DATA}
 
 3. Empty Password Test
     [Documentation]    Login with empty Password should fail
@@ -48,4 +47,4 @@ Login With Invalid Credentials Should Fail
 
 Set Random String
     ${rndString}    Create Random String    ${NUMBER_OF_TEST_CHARACTERS}
-    ${randomString}    Set Suite Variable    ${rndString}
+    ${RANDOM_TEST_DATA}    Set Suite Variable    ${rndString}
