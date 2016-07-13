@@ -4,7 +4,6 @@ Resource          ../globalConfig/testEnv.robot
 
 *** Variables ***
 ${NAVIGATOR_PAGE_TOP_LOGO_IMAGE_LOCATOR}    //img[@src='images/logo.gif']
-${ERROR_MESSAGE_LOCATOR}    ${EMPTY}
 
 *** Keywords ***
 Is Navigator Page Top Logo Image Visible
