@@ -8,7 +8,6 @@ ${USER_INPUT_LOCATOR}    //input[@id='j_username']
 ${PASSWORD_INPUT_LOCATOR}    //input[@name='j_password']
 ${LOGIN_BUTTON_LOCATOR}    //button[contains(text(),'Login')]
 ${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}    //img[@src='images/logo.gif?b=']
-${LOGIN_PAGE_URL}    http://epbygomw0158:18081/cmp/login
 
 *** Keywords ***
 Login
