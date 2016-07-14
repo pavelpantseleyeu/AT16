@@ -1,12 +1,12 @@
 *** Settings ***
-Suite Setup       Run Keywords    Start Browser    ${PAGE_URL}    ${BROWSER_TYPE}
-...               AND    Set Random String
-Suite Teardown    Stop Browser
+Suite Setup       Run Keywords    Rise Browser    ${PAGE_URL}    ${BROWSER_TYPE}
+...               AND    Set Random String    ${NUMBER_OF_TEST_CHARACTERS}
+Suite Teardown    Shutdown Browser
 Test Template     Login With Invalid Credentials Should Fail
 Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/LoginService.robot
-Resource          ../Service/BrowserService.robot
 Resource          ../Utils/Randomiser.robot
+Resource          ../UI/Browser.robot
 
 *** Variables ***
 
@@ -18,7 +18,8 @@ Resource          ../Utils/Randomiser.robot
     ...    3.Type valid user password to password input
     ...    4.Submit form
     ...    5.Check that error message has appear
-    ${RANDOM_TEST_DATA}    ${ADMIN_PASSWORD}
+    [Tags]
+    ${randomString}    ${ADMIN_PASSWORD}
 
 2. Invalid Password Test
     [Documentation]    Login with invalid Password should fail
@@ -27,7 +28,7 @@ Resource          ../Utils/Randomiser.robot
     ...    3.Type invalid user password to password input
     ...    4.Submit form
     ...    5.Check that error message has appear
-    ${ADMIN_LOGIN}    ${RANDOM_TEST_DATA}
+    ${ADMIN_LOGIN}    ${randomString}
 
 3. Empty Password Test
     [Documentation]    Login with empty Password should fail
@@ -44,7 +45,3 @@ Login With Invalid Credentials Should Fail
     Login Service UI    ${username}    ${password}
     ${test_status}=    Is Login Attempts Are Unsuccessful
     Should Be True    ${test_status}    Error! Login error message does not exists
-
-Set Random String
-    ${rndString}    Create Random String    ${NUMBER_OF_TEST_CHARACTERS}
-    ${RANDOM_TEST_DATA}    Set Suite Variable    ${rndString}

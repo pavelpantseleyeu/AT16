@@ -1,9 +1,9 @@
 *** Settings ***
-Suite Setup       Start Browser    ${PAGE_URL}    ${BROWSER_TYPE}
-Suite Teardown    Stop Browser
+Suite Setup       Rise Browser    ${PAGE_URL}    ${BROWSER_TYPE}
+Suite Teardown    Shutdown Browser
 Test Setup        Wait For Login Page
 Resource          ../Service/LoginService.robot
-Resource          ../Service/BrowserService.robot
+Resource          ../UI/Browser.robot
 Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/NavigatorService.robot
 

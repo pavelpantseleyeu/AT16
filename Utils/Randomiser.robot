@@ -2,7 +2,7 @@
 Library           String
 
 *** Keywords ***
-Create Random String
+Set Random String
     [Arguments]    ${number_of_characters}
-    ${x}=    Generate Random String    ${number_of_characters}
-    [Return]    ${x}
+    ${randomString}=    Generate Random String    ${number_of_characters}
+    Set Suite Variable    ${randomString}
