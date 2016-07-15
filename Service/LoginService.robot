@@ -8,11 +8,9 @@ Is Login Attempts Are Unsuccessful
     Location Should Be    ${LOGIN_PAGE_URL_WITH_ERROR}
     [Return]    ${login_error_message_status}
 
-Login And Wait Top Logo Image UI
+Login Service
     [Arguments]    ${login}    ${password}
     Login    ${login}    ${password}
-    ${logo_status}    Is Navigator Page Top Logo Image Visible
-    [Return]    ${logo_status}
 
 Start Login Page
     Start Browser With Login Page
@@ -20,6 +18,6 @@ Start Login Page
 Shutdown Login Page
     Close Browser With Login Page
 
-Login Service UI
-    [Arguments]    ${login}    ${password}
-    Login    ${login}    ${password}
+Is Login Attempts Are Successful
+    ${logo_status}    Is Navigator Page Top Logo Image Visible
+    [Return]    ${logo_status}

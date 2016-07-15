@@ -11,7 +11,7 @@ Is Navigator Page Top Logo Image Visible
     [Return]    ${status}
 
 Wait Navigator Page Top Logo Image
-    Wait Until Element Is Visible    ${NAVIGATOR_PAGE_TOP_LOGO_IMAGE_LOCATOR}    ${SELENIUM_DEFAULT_TIMEOUT}
+    Wait Until Element Is Visible    ${NAVIGATOR_PAGE_TOP_LOGO_IMAGE_LOCATOR}    ${SELENIUM_DEFAULT_TIMEOUT}    NAVIGATOR PAGE TOP LOGO IMAGE DOES NOT EXISTS
 
 Check Page Status
     [Arguments]    ${logo_status}    ${page_name}
