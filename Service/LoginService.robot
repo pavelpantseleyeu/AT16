@@ -8,7 +8,7 @@ Is Login Attempts Are Unsuccessful
     Location Should Be    ${LOGIN_PAGE_URL_WITH_ERROR}
     [Return]    ${login_error_message_status}
 
-Login Service
+Login Service UI
     [Arguments]    ${login}    ${password}
     Login    ${login}    ${password}
 

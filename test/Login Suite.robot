@@ -14,6 +14,6 @@ Resource          ../Service/NavigatorService.robot
     ...    2.Type valid user password to password input
     ...    3.Click on Submit button
     ...    4.Verify that user has logged
-    Login Service    ${ADMIN_LOGIN}    ${ADMIN_PASSWORD}
+    Login Service UI    ${ADMIN_LOGIN}    ${ADMIN_PASSWORD}
     ${logo_status}    Is Login Attempts Are Successful
     Check Navigator Page Status    ${logo_status}
