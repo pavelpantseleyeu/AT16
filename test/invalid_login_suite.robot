@@ -1,12 +1,13 @@
 *** Settings ***
-Suite Setup       Run Keywords    Rise Browser    ${PAGE_URL}    ${BROWSER_TYPE}
+Suite Setup       Run Keywords    Start Login Page
 ...               AND    Set Random String    ${NUMBER_OF_TEST_CHARACTERS}
-Suite Teardown    Shutdown Browser
+Suite Teardown    Shutdown Login Page
+Test Setup
+Test Teardown
 Test Template     Login With Invalid Credentials Should Fail
 Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/LoginService.robot
 Resource          ../Utils/Randomiser.robot
-Resource          ../UI/Browser.robot
 
 *** Variables ***
 
