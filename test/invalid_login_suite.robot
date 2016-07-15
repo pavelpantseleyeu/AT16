@@ -9,8 +9,6 @@ Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/LoginService.robot
 Resource          ../Utils/Randomiser.robot
 
-*** Variables ***
-
 *** Test Cases ***
 1. Invalid Username Test
     [Documentation]    Login with invalid Username should fail

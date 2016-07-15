@@ -13,6 +13,6 @@ Resource          ../Service/NavigatorService.robot
     ...    1.Type valid user login to login input
     ...    2.Type valid user password to password input
     ...    3.Click on Submit button
-    ...    4.Verify that user has loginnn
+    ...    4.Verify that user has logged
     ${logo_status}    Login And Wait Top Logo Image UI    ${ADMIN_LOGIN}    ${ADMIN_PASSWORD}
     Check Navigator Page Status    ${logo_status}
