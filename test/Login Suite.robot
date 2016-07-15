@@ -1,5 +1,4 @@
 *** Settings ***
-Test Setup        Start Login Page
 Test Teardown     Shutdown Login Page
 Resource          ../Service/LoginService.robot
 Resource          ../globalConfig/testEnv.robot
@@ -15,5 +14,5 @@ Resource          ../Utils/Checker.robot
     ...    3.Click on Submit button
     ...    4.Verify that user has logged
     Login Service UI    ${ADMIN_LOGIN}    ${ADMIN_PASSWORD}
-    ${logo_status}    Is Login Attempts Are Successful
-    Check Page Status    ${logo_status}    'NAVIGATOR'
+    ${logo_status}    Is Navigator Page Top Logo Image Visible
+    Should Be True    ${logo_status}    Navigator Page Top Logo Image In Not Visible

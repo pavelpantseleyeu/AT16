@@ -1,6 +1,7 @@
 *** Settings ***
 Library           Selenium2Library
 Resource          ../globalConfig/testEnv.robot
+Resource          ../globalConfig/Common.robot
 Resource          NavigatorPage.robot
 
 *** Variables ***

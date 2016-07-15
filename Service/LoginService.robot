@@ -10,14 +10,8 @@ Is Login Attempts Are Unsuccessful
 
 Login Service UI
     [Arguments]    ${login}    ${password}
-    Login    ${login}    ${password}
-
-Start Login Page
     Start Browser With Login Page
+    Login    ${login}    ${password}
 
 Shutdown Login Page
     Close Browser With Login Page
-
-Is Login Attempts Are Successful
-    ${logo_status}    Is Navigator Page Top Logo Image Visible
-    [Return]    ${logo_status}

@@ -1,6 +1,5 @@
 *** Settings ***
-Suite Setup       Run Keywords    Start Login Page
-...               AND    Set Random String    ${NUMBER_OF_TEST_CHARACTERS}
+Suite Setup       Set Random String    ${NUMBER_OF_TEST_CHARACTERS}
 Suite Teardown    Shutdown Login Page
 Test Setup
 Test Teardown
