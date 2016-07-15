@@ -3,7 +3,7 @@ Test Setup        Start Login Page
 Test Teardown     Shutdown Login Page
 Resource          ../Service/LoginService.robot
 Resource          ../globalConfig/testEnv.robot
-Resource          ../Service/NavigatorService.robot
+Resource          ../Utils/Checker.robot
 
 *** Variables ***
 
@@ -16,4 +16,4 @@ Resource          ../Service/NavigatorService.robot
     ...    4.Verify that user has logged
     Login Service UI    ${ADMIN_LOGIN}    ${ADMIN_PASSWORD}
     ${logo_status}    Is Login Attempts Are Successful
-    Check Navigator Page Status    ${logo_status}
+    Check Page Status    ${logo_status}    'NAVIGATOR'

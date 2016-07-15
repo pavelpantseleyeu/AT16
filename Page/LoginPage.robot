@@ -7,7 +7,6 @@ Resource          NavigatorPage.robot
 ${LOGIN_ERROR_MESSAGE_LOCATOR}    //font[contains(text(), 'Incorrect login or password.')]
 ${USER_INPUT_LOCATOR}    //input[@id='j_username']
 ${PASSWORD_INPUT_LOCATOR}    //input[@name='j_password']
-${LOGIN_BUTTON_LOCATOR}    //button[contains(text(),'Login')]
 ${LOGIN_PAGE_TOP_LOGO_IMAGE_LOCATOR}    //img[@src='images/logo.gif?b=']
 
 *** Keywords ***
@@ -29,7 +28,7 @@ Wait Login Page Top Logo Image
 
 Is Login Page Current
     ${current_url}    Get Location
-    ${login_page_status}    Set Variable If    "${current_url}" == "${LOGIN_PAGE_URL}"    True    False
+    ${login_page_status}    Run Keyword And Return Status    Should Contain    ${current_url}    ${LOGIN_PAGE_URL}
     [Return]    ${login_page_status}
 
 Start Browser With Login Page

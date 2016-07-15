@@ -8,6 +8,7 @@ Test Template     Login With Invalid Credentials Should Fail
 Resource          ../globalConfig/testEnv.robot
 Resource          ../Service/LoginService.robot
 Resource          ../Utils/Randomiser.robot
+Resource          ../Utils/Checker.robot
 
 *** Test Cases ***
 1. Invalid Username Test
@@ -43,4 +44,4 @@ Login With Invalid Credentials Should Fail
     [Arguments]    ${username}    ${password}
     Login Service UI    ${username}    ${password}
     ${test_status}=    Is Login Attempts Are Unsuccessful
-    Should Be True    ${test_status}    Error! Login error message does not exists
+    Check Page Status    ${test_status}    'LOGIN'

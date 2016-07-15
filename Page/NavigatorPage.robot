@@ -12,8 +12,3 @@ Is Navigator Page Top Logo Image Visible
 
 Wait Navigator Page Top Logo Image
     Wait Until Element Is Visible    ${NAVIGATOR_PAGE_TOP_LOGO_IMAGE_LOCATOR}    ${SELENIUM_DEFAULT_TIMEOUT}    NAVIGATOR PAGE TOP LOGO IMAGE DOES NOT EXISTS
-
-Check Page Status
-    [Arguments]    ${logo_status}    ${page_name}
-    ${message}    Catenate    ${page_name}    PAGE TOP LOGO STATUS MUST BE TRUE
-    Should Be True    ${logo_status}    ${message}
