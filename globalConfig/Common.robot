@@ -1,4 +1,4 @@
 *** Variables ***
 ${SELENIUM_DEFAULT_TIMEOUT}    17
-${BROWSER_TYPE}    ff
+${BROWSER_TYPE}    gc
 ${BROWSER_ID}     ${Empty}
